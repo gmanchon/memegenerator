@@ -8,7 +8,10 @@ import pandas as pd
 
 # Import from memegenerator
 import memegenerator
-from memegenerator.lib import clean_data
+from memegenerator.lib import clean_data, the_called_function
+
+res = the_called_function()
+print(f'===>>> {res} <<<===')
 
 if __name__ == '__main__':
     usage = '%(prog)s'
