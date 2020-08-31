@@ -1,3 +1,8 @@
+
+# Data Engineering Week 7 Day 1 Recap
+
+recap for de day 1
+
 # Data analysis
 - Document here the project: memegenerator
 - Description: Project Description
