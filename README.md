@@ -1,75 +1,36 @@
 
-# Data Engineering Week 7 Day 1 Recap
+DE day 1 recap
 
-recap for de day 1
+# memegenerator
 
-# Data analysis
-- Document here the project: memegenerator
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+code : https://github.com/gmanchon/memegenerator/
+prod : https://memegenerator450.herokuapp.com/
 
-Please document the project the better you can.
+create a memegenerator package:
 
-# Stratup the project
-
-The initial setup.
-
-Create virtualenv and install the project:
-```bash
-  $ sudo apt-get install virtualenv python-pip python-dev
-  $ deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
+``` bash
+wagon-make-package memegenerator
 ```
 
-Unittest test:
-```bash
-  $ make clean install test
-```
+link it to several github remotes
+explain the difference between remotes, pull, push
+add some commits, look at history, use diff, make a PR, merge it
 
-Check for memegenerator in gitlab.com/{group}.
-If your project is not set please add it:
+add some code in the package lib
+add some tests
+create a heroku app that installs and runs the package script using a Procfile
+push lib to prod
+check the logs, see the package logs
 
-- Create a new project on `gitlab.com/{group}/memegenerator`
-- Then populate it:
+add streamlit to display a page showing the package output
+add setup.sh and modify the Procfile to install package and run setup.sh and run streamlit
+push to heroku
 
-```bash
-  $ ##   e.g. if group is "{group}" and project_name is "memegenerator"
-  $ git remote add origin git@gitlab.com:{group}/memegenerator.git
-  $ git push -u origin master
-  $ git push -u origin --tags
-```
+plug CD to existing github CI
+create heroku api key
+add it to github key (see exercice)
+modify yaml conf with correct padding
 
-Functionnal test with a script:
-```bash
-  $ cd /tmp
-  $ memegenerator-run
-```
-# Install
-Go to `gitlab.com/{group}/memegenerator` to see the project, manage issues,
-setup you ssh public key, ...
+push to github, check tests are ok and it then pushes to heroku
 
-Create a python3 virtualenv and activate it:
-```bash
-  $ sudo apt-get install virtualenv python-pip python-dev
-  $ deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
-```
-
-Clone the project and install it:
-```bash
-  $ git clone gitlab.com/{group}/memegenerator
-  $ cd memegenerator
-  $ pip install -r requirements.txt
-  $ make clean install test                # install and test
-```
-Functionnal test with a script:
-```bash
-  $ cd /tmp
-  $ memegenerator-run
-``` 
-
-# Continus integration
-## Github 
-Every push of `master` branch will execute `.github/workflows/pythonpackages.yml` docker jobs.
-## Gitlab
-Every push of `master` branch will execute `.gitlab-ci.yml` docker jobs.
+(explain virtual env if time remains)
