@@ -1,3 +1,6 @@
 du code qui fonctionne
 
 bn,
+
+
+du code qui ne fonctionne pas
