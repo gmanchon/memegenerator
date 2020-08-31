@@ -9,6 +9,15 @@ import datetime
 
 pd.set_option('display.width', 200)
 
+from memegenerator.meme import create_meme
+
+
+
+def the_called_function():
+    word = 'cat'
+    return create_meme(word)
+
+
 
 def clean_data(data):
     """ clean data
